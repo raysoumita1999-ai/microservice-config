@@ -48,8 +48,11 @@ public class AccountController {
     @Autowired
     private AccountsContactInfoDto accountsContactInfoDto;
 
-    @Value("${build.version}")
-    private String buildVersion;
+//    @Value("${build.version}")
+//    private String buildVersion;
+
+    @Value("${build.version:1.0}")
+    private String buildVersion; // due to bypass the error we have write like this.
 
 
     @Operation(
